@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:parqueo/View/Menu.dart';
-import 'package:parqueo/View/formIngreso.dart';
-import 'package:parqueo/View/VistaDatos.dart';
+import 'package:parqueo/Vista/Menu.dart';
+import 'package:parqueo/Vista/formularioIngreso.dart';
+import 'package:parqueo/Vista/VistaDatos.dart';
 
-import 'View/Menu.dart';
+import 'Vista/Menu.dart';
 
 void main() => runApp(const MyApp());
 

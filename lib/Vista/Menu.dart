@@ -1,9 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:parqueo/Logica/Logic.dart';
-import 'package:parqueo/View/VistaDatos.dart';
-import 'package:parqueo/View/formIngreso.dart';
+import 'package:parqueo/Logica/Logica.dart';
+import 'package:parqueo/Vista/VistaDatos.dart';
+import 'package:parqueo/Vista/formularioIngreso.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:parqueo/Logica/Logic.dart';
+import 'package:parqueo/Logica/Logica.dart';
 
 //para poder validar que el campo está ocupado
 late int boton;
@@ -26,7 +26,7 @@ class Ocupado extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-                "El vehículo con placa: ${listabotones[1]}, \n modelo: ${listabotones[2]}, debe pagar: \n ${listabotones[5]} dólares"),
+                "${listabotones[0]}, dueño del vehículo placa: ${listabotones[1]}, \n modelo: ${listabotones[2]}, debe pagar: \n ${listabotones[5]} dólares"),
             RaisedButton(
               color: Colors.blue,
               child: const Text("Pagar"),
@@ -45,17 +45,27 @@ class Ocupado extends StatelessWidget {
   void _showSalida(BuildContext context) {
     //función limpiar parqueo
     limpiarParqueo(boton);
-    Navigator.pushNamed(context, "/");
+    Navigator.pop(context, "/");
   }
 
 //muestra una alerta indicando la realización del pago
   void _showDialog(BuildContext context) {
     showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return const AlertDialog(
-            title: Text("Parqueo pagado"),
-          );
-        });
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Parqueo pagado"),
+          actions: [
+            TextButton(
+              child: const Text("Ok"),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
+        );
+      },
+      barrierDismissible: true,
+    );
   }
 }

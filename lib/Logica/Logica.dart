@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:parqueo/View/formIngreso.dart';
+import 'package:parqueo/Vista/formularioIngreso.dart';
 
 // variable global para validar el ingreso del botón
 bool ingresoDatos = true;
@@ -284,30 +284,6 @@ void llenarlista(int Boton, String Nombre, String Placa, String Modelo) {
   }
 }
 
-// Función para asignar el precio de cada campo de parqueo
-void llenarPrecio(String precio) {
-  Parqueo1[5] = precio;
-  Parqueo2[5] = precio;
-  Parqueo3[5] = precio;
-  Parqueo4[5] = precio;
-  Parqueo5[5] = precio;
-  Parqueo6[5] = precio;
-  Parqueo7[5] = precio;
-  Parqueo8[5] = precio;
-  Parqueo9[5] = precio;
-  Parqueo10[5] = precio;
-  Parqueo11[5] = precio;
-  Parqueo12[5] = precio;
-  Parqueo13[5] = precio;
-  Parqueo14[5] = precio;
-  Parqueo15[5] = precio;
-  Parqueo16[5] = precio;
-  Parqueo17[5] = precio;
-  Parqueo18[5] = precio;
-  Parqueo19[5] = precio;
-  Parqueo20[5] = precio;
-}
-
 //Función para obtener los datos del vehículo, incluyendo el precio para realizar el pago
 List funcionList(int btn) {
   llenarPrecio(obtenerPrecio(btn));
@@ -438,6 +414,30 @@ List funcionList(int btn) {
     default:
   }
   return listaDatos;
+}
+
+// Función para asignar el precio de cada campo de parqueo
+void llenarPrecio(String precio) {
+  Parqueo1[5] = precio;
+  Parqueo2[5] = precio;
+  Parqueo3[5] = precio;
+  Parqueo4[5] = precio;
+  Parqueo5[5] = precio;
+  Parqueo6[5] = precio;
+  Parqueo7[5] = precio;
+  Parqueo8[5] = precio;
+  Parqueo9[5] = precio;
+  Parqueo10[5] = precio;
+  Parqueo11[5] = precio;
+  Parqueo12[5] = precio;
+  Parqueo13[5] = precio;
+  Parqueo14[5] = precio;
+  Parqueo15[5] = precio;
+  Parqueo16[5] = precio;
+  Parqueo17[5] = precio;
+  Parqueo18[5] = precio;
+  Parqueo19[5] = precio;
+  Parqueo20[5] = precio;
 }
 
 //Calcular el precio de cada vehículo por espacio por medio de la hora de entrada y salida de cada vehículo

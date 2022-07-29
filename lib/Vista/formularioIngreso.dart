@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:parqueo/Logica/Logic.dart';
+import 'package:parqueo/Logica/Logica.dart';
 
 //para poder validar que el campo está disponible
 
@@ -92,18 +92,29 @@ class _IngresoState extends State<Ingreso> {
         placaValue,
         modeloValue,
       );
-      Navigator.pushNamed(context, "/");
+      Navigator.pop(context, "/");
+      //_showDialog(context);
     }
   }
 
   ////muestra una alerta indicando el registro del vehículo en el campo de parqueo
   void _showDialog(BuildContext context) {
     showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return const AlertDialog(
-            title: Text("Vehículo registrado"),
-          );
-        });
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Vehículo registrado"),
+          actions: [
+            TextButton(
+              child: const Text("Aceptar"),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
+        );
+      },
+      barrierDismissible: true,
+    );
   }
 }
