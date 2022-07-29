@@ -524,7 +524,7 @@ String obtenerPrecio(int btn) {
 
 //Función para sobreescribir cada espacio del parqueo según lo van desocupando
 void limpiarParqueo(int btn) {
-  switch (boton) {
+  switch (btn) {
     case 1:
       Parqueo1[0] = "";
       Parqueo1[1] = "";
